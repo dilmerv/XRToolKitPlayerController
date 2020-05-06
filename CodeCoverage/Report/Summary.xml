@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>5/6/2020 - 8:07:01 AM</Generatedon>
+    <Parser>OpenCoverParser</Parser>
+    <Assemblies>3</Assemblies>
+    <Classes>4</Classes>
+    <Files>4</Files>
+    <Coveredlines>54</Coveredlines>
+    <Uncoveredlines>223</Uncoveredlines>
+    <Coverablelines>277</Coverablelines>
+    <Totallines>506</Totallines>
+    <Linecoverage>19.4</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+  </Summary>
+  <Coverage>
+    <Assembly name="Assembly-CSharp-Editor" classes="1" coverage="0" coveredlines="0" coverablelines="98" totallines="158" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="ReadmeEditor" coverage="0" coveredlines="0" coverablelines="98" totallines="158" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+    <Assembly name="GameAssemblyBinding" classes="2" coverage="24.6" coveredlines="41" coverablelines="166" totallines="307" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="UnityTemplateProjects.SimpleCameraController" coverage="0" coveredlines="0" coverablelines="100" totallines="169" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="XRPlayerController" coverage="62.1" coveredlines="41" coverablelines="66" totallines="138" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+    <Assembly name="Tests" classes="1" coverage="100" coveredlines="13" coverablelines="13" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="Tests.XRPlayerControllerTests" coverage="100" coveredlines="13" coverablelines="13" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2020-05-06_08-07-00" tag="">
+  <assembly name="Assembly-CSharp-Editor">
+    <class name="ReadmeEditor" coveredlines="0" coverablelines="98" totallines="158" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="GameAssemblyBinding">
+    <class name="UnityTemplateProjects.SimpleCameraController" coveredlines="0" coverablelines="100" totallines="169" coveredbranches="0" totalbranches="0" />
+    <class name="XRPlayerController" coveredlines="41" coverablelines="66" totallines="138" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Tests">
+    <class name="Tests.XRPlayerControllerTests" coveredlines="13" coverablelines="13" totallines="41" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
