@@ -10,13 +10,16 @@ public class XRPlayerController : MonoBehaviour
     [Header("Behaviour Options")]
 
     [SerializeField]
-    private float speed = 10.0f;
+    private float speed = 7.0f;
 
     [SerializeField]
-    private float jumpForce = 250.0f;
+    private float jumpForce = 600.0f;
 
     [SerializeField]
-    private XRNode controllerNode = XRNode.LeftHand;
+    private XRNode controllerNodeForMove = XRNode.LeftHand;
+
+    [SerializeField]
+    private XRNode controllerNodeForJump = XRNode.RightHand;
 
     [SerializeField]
     private bool checkForGroundOnJump = true;
@@ -34,7 +37,9 @@ public class XRPlayerController : MonoBehaviour
     [SerializeField]
     private CapsuleDirection capsuleDirection = CapsuleDirection.YAxis;
 
-    private InputDevice controller;
+    private InputDevice controllerForMove;
+
+    private InputDevice controllerForJump;
 
     private bool isGrounded;
 
@@ -72,23 +77,24 @@ public class XRPlayerController : MonoBehaviour
 
     private void GetDevice()
     {
-        InputDevices.GetDevicesAtXRNode(controllerNode, devices);
-        controller = devices.FirstOrDefault();
+        InputDevices.GetDevicesAtXRNode(controllerNodeForMove, devices);
+        controllerForMove = devices.FirstOrDefault();
+        InputDevices.GetDevicesAtXRNode(controllerNodeForJump, devices);
+        controllerForJump = devices.FirstOrDefault();
     }
 
     void Update()
     {
-        if (controller == null)
+        if (controllerForMove == null || controllerForJump == null)
         {
             GetDevice();
         }
 
-        UpdateMovement();
-
-        UpdateJump(controller);
+        UpdateMovement(controllerForMove);
+        UpdateJump(controllerForJump);
     }
 
-    private void UpdateMovement()
+    private void UpdateMovement(InputDevice controller)
     {
         Vector2 primary2dValue;
 
